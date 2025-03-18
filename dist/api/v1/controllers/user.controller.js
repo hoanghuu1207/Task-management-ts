@@ -30,7 +30,7 @@ const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         }
         else {
             req.body.password = (0, md5_1.default)(req.body.password);
-            req.body.token = (0, generate_1.generateRamdomString)(30);
+            req.body.token = (0, generate_1.generateRandomString)(30);
             const user = new user_model_1.default(req.body);
             yield user.save();
             const token = user.token;

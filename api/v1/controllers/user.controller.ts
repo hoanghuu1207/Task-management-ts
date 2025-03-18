@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import md5 from "md5";
 import User from "../models/user.model";
 
-import { generateRamdomString } from "../../../helpers/generate";
+import { generateRandomString } from "../../../helpers/generate";
 
 // const ForgotPassword = require("../models/forgot-password.model");
 // const sendMailHelper = require("../../../helpers/sendMail");
@@ -22,7 +22,7 @@ export const register = async (req: Request, res: Response) => {
       });
     }else{
       req.body.password = md5(req.body.password);
-      req.body.token = generateRamdomString(30);
+      req.body.token = generateRandomString(30);
 
       const user = new User(req.body);
       await user.save();
@@ -105,7 +105,7 @@ export const login = async (req: Request, res: Response) => {
 //       return;
 //     }
     
-//     const otp = generateHelper.generateRamdomNumer(8);
+//     const otp = generateHelper.generateRandomNumer(8);
 
 //     const timeExpire = 2;
 

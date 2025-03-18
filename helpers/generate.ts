@@ -1,4 +1,4 @@
-export const generateRamdomString = (length: number): string => {
+export const generateRandomString = (length: number): string => {
 	const characters: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
 	let result: string = "";
@@ -8,7 +8,7 @@ export const generateRamdomString = (length: number): string => {
 	return result;
 }
 
-export const generateRamdomNumer = (length: number): string => {
+export const generateRandomNubmer = (length: number): string => {
 	const characters: string = "0123456789";
 
 	let result: string = "";

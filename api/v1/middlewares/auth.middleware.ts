@@ -9,7 +9,7 @@ export const requireAuth = async (req: Request, res: Response, next: NextFunctio
       deleted: false,
       token: token
     }).select("-password");
-  
+
     if(!user){
       res.json({
         code: 400,
@@ -17,7 +17,7 @@ export const requireAuth = async (req: Request, res: Response, next: NextFunctio
       });
       return;
     }
-  
+
     req["user"] = user;
   
     next();
