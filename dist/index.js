@@ -44,6 +44,11 @@ const corsOptions = {
 app.use((0, cors_1.default)(corsOptions));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
+app.get('/test', (req, res) => {
+    console.log('Test endpoint called');
+    console.log('Headers:', req.headers);
+    res.json({ message: 'Test endpoint working' });
+});
 (0, index_route_1.default)(app);
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);

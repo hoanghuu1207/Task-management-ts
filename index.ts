@@ -31,6 +31,12 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/test', (req, res) => {
+  console.log('Test endpoint called');
+  console.log('Headers:', req.headers);
+  res.json({ message: 'Test endpoint working' });
+});
+
 mainV1Routes(app);
 
 app.listen(port, () => {
