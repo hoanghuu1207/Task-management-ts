@@ -1,6 +1,6 @@
 import express, {Express} from "express";
 import dotenv from "dotenv";
-import cors from "cors";
+// import cors from "cors";
 import * as database from "./config/database";
 
 import mainV1Routes from "./api/v1/routes/index.route";
@@ -18,14 +18,14 @@ const port:number | string = process.env.PORT || 3000;
 // }
 // app.use(cors(corsOptions));
 
-const corsOptions = {
-  origin: '*', // Hoặc domain cụ thể của frontend
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-};
+// const corsOptions = {
+//   origin: '*', // Hoặc domain cụ thể của frontend
+//   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+//   credentials: true
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 //body-parser
 app.use(express.json());
